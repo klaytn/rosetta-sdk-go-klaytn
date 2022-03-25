@@ -72,17 +72,17 @@ All support requests must be made via [our support team][3].
 © 2022 Coinbase
 
 <!-- Before adding link 15, populate link 4. One you do that, please erase this note. --->
-[1]: https://github.com/coinbase/rosetta-sdk-go/issues
+[1]: https://github.com/klaytn/rosetta-sdk-go-klaytn/issues
 [2]: https://chris.beams.io/posts/git-commit/#seven-rules
 [3]: https://support.coinbase.com/customer/en/portal/articles/2288496-how-can-i-contact-coinbase-support-
 <!--- [4]: link removed --->
-[5]: https://github.com/coinbase/rosetta-sdk-go/issues/new/choose
-[6]: https://github.com/coinbase/rosetta-sdk-go/issues/new?assignees=&labels=bug&template=bug_report.md&title=
-[7]: https://github.com/coinbase/rosetta-sdk-go/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=
-[8]: https://github.com/coinbase/rosetta-sdk-go/pulls
-[9]: https://github.com/coinbase/rosetta-sdk-go/compare
+[5]: https://github.com/klaytn/rosetta-sdk-go-klaytn/issues/new/choose
+[6]: https://github.com/klaytn/rosetta-sdk-go-klaytn/issues/new?assignees=&labels=bug&template=bug_report.md&title=
+[7]: https://github.com/klaytn/rosetta-sdk-go-klaytn/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=
+[8]: https://github.com/klaytn/rosetta-sdk-go-klaytn/pulls
+[9]: https://github.com/klaytn/rosetta-sdk-go-klaytn/compare
 [10]: https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request#creating-an-issue
 [11]: https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request#creating-a-pull-request
 [12]: https://hackerone.com/coinbase
 [13]: https://community.rosetta-api.org
-[14]: https://github.com/coinbase/rosetta-sdk-go/security
+[14]: https://github.com/klaytn/rosetta-sdk-go-klaytn/security

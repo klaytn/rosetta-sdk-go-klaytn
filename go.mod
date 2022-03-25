@@ -8,7 +8,6 @@ require (
 	github.com/btcsuite/btcd v0.22.0-beta
 	github.com/cenkalti/backoff v2.2.1+incompatible
 	github.com/coinbase/kryptology v1.8.0
-	github.com/coinbase/rosetta-sdk-go v0.7.5
 	github.com/dgraph-io/badger/v2 v2.2007.4
 	github.com/fatih/color v1.13.0
 	github.com/gorilla/mux v1.8.0

@@ -17,5 +17,5 @@ go get github.com/incu6us/goimports-reviser/v2;
 
 while IFS= read -r -d '' FILE 
 do
-  goimports-reviser -file-path "${FILE}" -local github.com/coinbase/rosetta-sdk-go/
+  goimports-reviser -file-path "${FILE}" -local github.com/klaytn/rosetta-sdk-go-klaytn/
 done < <(find . -type f -name "*.go" -print0)
