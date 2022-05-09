@@ -23,8 +23,8 @@ import (
 	"github.com/lucasjones/reggen"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/coinbase/rosetta-sdk-go/storage/encoder"
-	"github.com/coinbase/rosetta-sdk-go/utils"
+	"github.com/klaytn/rosetta-sdk-go-klaytn/storage/encoder"
+	"github.com/klaytn/rosetta-sdk-go-klaytn/utils"
 )
 
 func newTestBadgerDatabase(ctx context.Context, dir string) (Database, error) {

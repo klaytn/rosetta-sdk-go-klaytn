@@ -25,9 +25,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/coinbase/rosetta-sdk-go/asserter"
-	"github.com/coinbase/rosetta-sdk-go/client"
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/klaytn/rosetta-sdk-go-klaytn/asserter"
+	"github.com/klaytn/rosetta-sdk-go-klaytn/client"
+	"github.com/klaytn/rosetta-sdk-go-klaytn/types"
 )
 
 var (

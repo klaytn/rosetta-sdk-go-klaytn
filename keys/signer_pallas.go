@@ -22,8 +22,8 @@ import (
 
 	"github.com/coinbase/kryptology/pkg/signatures/schnorr/mina"
 
-	"github.com/coinbase/rosetta-sdk-go/asserter"
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/klaytn/rosetta-sdk-go-klaytn/asserter"
+	"github.com/klaytn/rosetta-sdk-go-klaytn/types"
 )
 
 var ErrPallasTransactionValidationErr = errors.New("transaction with pallas validation failed")

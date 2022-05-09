@@ -18,10 +18,10 @@ import (
 	"fmt"
 
 	zil_schnorr "github.com/Zilliqa/gozilliqa-sdk/schnorr"
-	"github.com/ethereum/go-ethereum/crypto/secp256k1"
+	"github.com/klaytn/klaytn/crypto/secp256k1"
 
-	"github.com/coinbase/rosetta-sdk-go/asserter"
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/klaytn/rosetta-sdk-go-klaytn/asserter"
+	"github.com/klaytn/rosetta-sdk-go-klaytn/types"
 )
 
 // SignerSecp256k1 is initialized from a keypair
