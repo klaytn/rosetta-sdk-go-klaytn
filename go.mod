@@ -3,7 +3,7 @@ module github.com/klaytn/rosetta-sdk-go-klaytn
 go 1.16
 
 require (
-	github.com/DataDog/zstd v1.5.0
+	github.com/DataDog/zstd v1.5.2
 	github.com/Zilliqa/gozilliqa-sdk v1.2.1-0.20201201074141-dd0ecada1be6
 	github.com/btcsuite/btcd v0.22.1
 	github.com/cenkalti/backoff v2.2.1+incompatible
