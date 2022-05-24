@@ -34,7 +34,7 @@ func LoggerMiddleware(inner http.Handler) http.Handler {
 		inner.ServeHTTP(w, r)
 
 		if strings.Contains(r.RequestURI, "/block") {
-			var bReq types.BlockRequest
+			var bReq *types.BlockRequest
 			err := json.NewDecoder(r.Body).Decode(&bReq)
 			if err != nil {
 				http.Error(w, err.Error(), http.StatusBadRequest)
