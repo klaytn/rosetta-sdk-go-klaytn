@@ -30,11 +30,16 @@ func LoggerMiddleware(inner http.Handler) http.Handler {
 
 		inner.ServeHTTP(w, r)
 
+		difference := time.Since(start)
 		log.Printf(
 			"%s %s %s",
 			r.Method,
 			r.RequestURI,
 			time.Since(start),
 		)
+
+		if difference > time.Minute {
+			log.Printf("%v", r.PostForm)
+		}
 	})
 }
