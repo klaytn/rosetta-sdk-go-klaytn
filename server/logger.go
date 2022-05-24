@@ -17,12 +17,8 @@
 package server
 
 import (
-	"context"
-	"encoding/json"
-	"github.com/klaytn/rosetta-sdk-go-klaytn/types"
 	"log"
 	"net/http"
-	"strings"
 	"time"
 )
 
@@ -32,30 +28,13 @@ func LoggerMiddleware(inner http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		start := time.Now()
 
-		cloned := r.Clone(context.Background())
 		inner.ServeHTTP(w, r)
 
-		if strings.Contains(r.RequestURI, "/block") {
-			bReq := &types.BlockRequest{}
-			err := json.NewDecoder(cloned.Body).Decode(&bReq)
-			if err != nil {
-				http.Error(w, err.Error(), http.StatusBadRequest)
-				return
-			}
-			log.Printf(
-				"%s %s %v %s",
-				r.Method,
-				r.RequestURI,
-				bReq.BlockIdentifier.Index,
-				time.Since(start),
-			)
-		} else {
-			log.Printf(
-				"%s %s %s",
-				r.Method,
-				r.RequestURI,
-				time.Since(start),
-			)
-		}
+		log.Printf(
+			"%s %s %s",
+			r.Method,
+			r.RequestURI,
+			time.Since(start),
+		)
 	})
 }

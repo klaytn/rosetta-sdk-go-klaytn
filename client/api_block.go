@@ -49,6 +49,8 @@ func (a *BlockAPIService) Block(
 		localVarPostBody interface{}
 	)
 
+	fmt.Printf("BlockNumber: %v\n", blockRequest.BlockIdentifier.Index)
+
 	// create path and map variables
 	additionalPath := "/block"
 	localVarHeaderParams := make(map[string]string)
