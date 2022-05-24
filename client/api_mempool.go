@@ -43,7 +43,7 @@ func (a *MempoolAPIService) Mempool(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/mempool"
+	additionalPath := "/mempool"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -66,7 +66,7 @@ func (a *MempoolAPIService) Mempool(
 	// body params
 	localVarPostBody = networkRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -134,7 +134,7 @@ func (a *MempoolAPIService) MempoolTransaction(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/mempool/transaction"
+	additionalPath := "/mempool/transaction"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -157,7 +157,7 @@ func (a *MempoolAPIService) MempoolTransaction(
 	// body params
 	localVarPostBody = mempoolTransactionRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}

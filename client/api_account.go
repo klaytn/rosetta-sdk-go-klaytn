@@ -53,7 +53,8 @@ func (a *AccountAPIService) AccountBalance(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/account/balance"
+	additionalPath := "/account/balance"
+
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -76,7 +77,7 @@ func (a *AccountAPIService) AccountBalance(
 	// body params
 	localVarPostBody = accountBalanceRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -148,7 +149,7 @@ func (a *AccountAPIService) AccountCoins(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/account/coins"
+	additionalPath := "/account/coins"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -171,7 +172,7 @@ func (a *AccountAPIService) AccountCoins(
 	// body params
 	localVarPostBody = accountCoinsRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}

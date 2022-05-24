@@ -86,7 +86,7 @@ type Fetcher struct {
 
 // New constructs a new Fetcher with provided options.
 func New(
-	serverAddress string,
+	serverAddresses []string,
 	options ...Option,
 ) *Fetcher {
 	f := &Fetcher{
@@ -117,7 +117,7 @@ func New(
 
 		// Create default fetcher
 		clientCfg := client.NewConfiguration(
-			serverAddress,
+			serverAddresses,
 			DefaultUserAgent,
 			defaultHTTPClient,
 		)

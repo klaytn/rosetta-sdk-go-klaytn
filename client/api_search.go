@@ -48,7 +48,7 @@ func (a *SearchAPIService) SearchTransactions(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/search/transactions"
+	additionalPath := "/search/transactions"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -71,7 +71,7 @@ func (a *SearchAPIService) SearchTransactions(
 	// body params
 	localVarPostBody = searchTransactionsRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}

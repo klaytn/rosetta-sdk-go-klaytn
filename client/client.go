@@ -169,7 +169,7 @@ func (c *APIClient) GetConfig() *Configuration {
 // prepareRequest build the request
 func (c *APIClient) prepareRequest(
 	ctx context.Context,
-	path string,
+	additionalPath string,
 	postBody interface{},
 	headerParams map[string]string,
 ) (localVarRequest *http.Request, err error) {
@@ -190,7 +190,7 @@ func (c *APIClient) prepareRequest(
 	}
 
 	// Setup path and query parameters
-	url, err := url.Parse(path)
+	url, err := url.Parse(c.cfg.GetRandomServerURL() + additionalPath)
 	if err != nil {
 		return nil, err
 	}

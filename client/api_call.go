@@ -53,7 +53,7 @@ func (a *CallAPIService) Call(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/call"
+	additionalPath := "/call"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -76,7 +76,7 @@ func (a *CallAPIService) Call(
 	// body params
 	localVarPostBody = callRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}

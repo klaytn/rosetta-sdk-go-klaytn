@@ -43,7 +43,7 @@ func (a *NetworkAPIService) NetworkList(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/network/list"
+	additionalPath := "/network/list"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -66,7 +66,7 @@ func (a *NetworkAPIService) NetworkList(
 	// body params
 	localVarPostBody = metadataRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -131,7 +131,7 @@ func (a *NetworkAPIService) NetworkOptions(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/network/options"
+	additionalPath := "/network/options"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -154,7 +154,7 @@ func (a *NetworkAPIService) NetworkOptions(
 	// body params
 	localVarPostBody = networkRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -217,7 +217,7 @@ func (a *NetworkAPIService) NetworkStatus(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/network/status"
+	additionalPath := "/network/status"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -240,7 +240,7 @@ func (a *NetworkAPIService) NetworkStatus(
 	// body params
 	localVarPostBody = networkRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}

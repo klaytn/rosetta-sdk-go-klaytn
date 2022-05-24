@@ -45,7 +45,7 @@ func (a *ConstructionAPIService) ConstructionCombine(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/construction/combine"
+	additionalPath := "/construction/combine"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -68,7 +68,7 @@ func (a *ConstructionAPIService) ConstructionCombine(
 	// body params
 	localVarPostBody = constructionCombineRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -131,7 +131,7 @@ func (a *ConstructionAPIService) ConstructionDerive(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/construction/derive"
+	additionalPath := "/construction/derive"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -154,7 +154,7 @@ func (a *ConstructionAPIService) ConstructionDerive(
 	// body params
 	localVarPostBody = constructionDeriveRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -217,7 +217,7 @@ func (a *ConstructionAPIService) ConstructionHash(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/construction/hash"
+	additionalPath := "/construction/hash"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -240,7 +240,7 @@ func (a *ConstructionAPIService) ConstructionHash(
 	// body params
 	localVarPostBody = constructionHashRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -310,7 +310,7 @@ func (a *ConstructionAPIService) ConstructionMetadata(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/construction/metadata"
+	additionalPath := "/construction/metadata"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -333,7 +333,7 @@ func (a *ConstructionAPIService) ConstructionMetadata(
 	// body params
 	localVarPostBody = constructionMetadataRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -397,7 +397,7 @@ func (a *ConstructionAPIService) ConstructionParse(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/construction/parse"
+	additionalPath := "/construction/parse"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -420,7 +420,7 @@ func (a *ConstructionAPIService) ConstructionParse(
 	// body params
 	localVarPostBody = constructionParseRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -489,7 +489,7 @@ func (a *ConstructionAPIService) ConstructionPayloads(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/construction/payloads"
+	additionalPath := "/construction/payloads"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -512,7 +512,7 @@ func (a *ConstructionAPIService) ConstructionPayloads(
 	// body params
 	localVarPostBody = constructionPayloadsRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -579,7 +579,7 @@ func (a *ConstructionAPIService) ConstructionPreprocess(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/construction/preprocess"
+	additionalPath := "/construction/preprocess"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -602,7 +602,7 @@ func (a *ConstructionAPIService) ConstructionPreprocess(
 	// body params
 	localVarPostBody = constructionPreprocessRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -668,7 +668,7 @@ func (a *ConstructionAPIService) ConstructionSubmit(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/construction/submit"
+	additionalPath := "/construction/submit"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -691,7 +691,7 @@ func (a *ConstructionAPIService) ConstructionSubmit(
 	// body params
 	localVarPostBody = constructionSubmitRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}

@@ -18,8 +18,10 @@ package client
 
 import (
 	"fmt"
+	"math/rand"
 	"net/http"
 	"strings"
+	"time"
 )
 
 // contextKeys are used to identify the type of value in the context.
@@ -86,18 +88,19 @@ type Configuration struct {
 }
 
 // NewConfiguration returns a new Configuration object
-func NewConfiguration(basePath string, userAgent string, httpClient *http.Client) *Configuration {
+func NewConfiguration(pathes []string, userAgent string, httpClient *http.Client) *Configuration {
 	cfg := &Configuration{
-		BasePath:      basePath,
+		BasePath:      pathes[0],
 		DefaultHeader: make(map[string]string),
 		UserAgent:     userAgent,
 		Debug:         false,
-		Servers: []ServerConfiguration{
-			{
-				URL:         basePath,
-				Description: "No description provided",
-			},
-		},
+		Servers:       make([]ServerConfiguration, len(pathes)),
+	}
+	for i, p := range pathes {
+		cfg.Servers[i] = ServerConfiguration{
+			URL:         p,
+			Description: "No description provided",
+		}
 	}
 
 	if httpClient != nil {
@@ -143,4 +146,10 @@ func (c *Configuration) ServerURL(index int, variables map[string]string) (strin
 		}
 	}
 	return url, nil
+}
+
+func (c *Configuration) GetRandomServerURL() string {
+	rand.Seed(time.Now().UnixNano())
+	idx := rand.Intn(len(c.Servers))
+	return c.Servers[idx].URL
 }

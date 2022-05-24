@@ -50,7 +50,7 @@ func (a *BlockAPIService) Block(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/block"
+	additionalPath := "/block"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -73,7 +73,7 @@ func (a *BlockAPIService) Block(
 	// body params
 	localVarPostBody = blockRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -148,7 +148,7 @@ func (a *BlockAPIService) BlockTransaction(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/block/transaction"
+	additionalPath := "/block/transaction"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -171,7 +171,7 @@ func (a *BlockAPIService) BlockTransaction(
 	// body params
 	localVarPostBody = blockTransactionRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}

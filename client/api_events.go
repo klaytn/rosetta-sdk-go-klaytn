@@ -48,7 +48,7 @@ func (a *EventsAPIService) EventsBlocks(
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/events/blocks"
+	additionalPath := "/events/blocks"
 	localVarHeaderParams := make(map[string]string)
 
 	// to determine the Content-Type header
@@ -71,7 +71,7 @@ func (a *EventsAPIService) EventsBlocks(
 	// body params
 	localVarPostBody = eventsBlocksRequest
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarPostBody, localVarHeaderParams)
+	r, err := a.client.prepareRequest(ctx, additionalPath, localVarPostBody, localVarHeaderParams)
 	if err != nil {
 		return nil, nil, err
 	}
