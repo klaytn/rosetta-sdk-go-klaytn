@@ -20,6 +20,7 @@ import (
 	_context "context"
 	"fmt"
 	_ioutil "io/ioutil"
+	"log"
 	_nethttp "net/http"
 
 	"github.com/klaytn/rosetta-sdk-go-klaytn/types"
@@ -49,7 +50,7 @@ func (a *BlockAPIService) Block(
 		localVarPostBody interface{}
 	)
 
-	fmt.Printf("BlockNumber: %v\n", blockRequest.BlockIdentifier.Index)
+	log.Printf("BlockNumber: %v\n", blockRequest.BlockIdentifier.Index)
 
 	// create path and map variables
 	additionalPath := "/block"
