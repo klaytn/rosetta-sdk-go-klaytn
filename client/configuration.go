@@ -18,7 +18,6 @@ package client
 
 import (
 	"fmt"
-	"math/rand"
 	"net/http"
 	"strings"
 	"time"
@@ -149,7 +148,7 @@ func (c *Configuration) ServerURL(index int, variables map[string]string) (strin
 }
 
 func (c *Configuration) GetRandomServerURL() string {
-	rand.Seed(time.Now().UnixNano())
-	idx := rand.Intn(len(c.Servers))
+	sec := time.Now().Second()
+	idx := sec % len(c.Servers)
 	return c.Servers[idx].URL
 }
