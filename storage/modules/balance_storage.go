@@ -1252,29 +1252,37 @@ func (b *BalanceStorage) getHistoricalBalance(
 	currency *types.Currency,
 	index int64,
 ) (*types.Amount, error) {
-	var foundValue string
-	_, err := dbTx.Scan(
-		ctx,
-		GetHistoricalBalancePrefix(account, currency),
-		GetHistoricalBalanceKey(account, currency, index),
-		func(k []byte, v []byte) error {
-			foundValue = new(big.Int).SetBytes(v).String()
-			return errAccountFound
-		},
-		false,
-		true,
-	)
-	if errors.Is(err, errAccountFound) {
-		return &types.Amount{
-			Value:    foundValue,
-			Currency: currency,
-		}, nil
-	}
+	// To not use DB for historical balance when check:data,
+	// just fetch the account balance in that block index from Klaytn EN.
+	amount, err := b.helper.AccountBalance(ctx, account, currency, &types.BlockIdentifier{Index: index})
 	if err != nil {
-		return nil, fmt.Errorf("%w: database scan failed", err)
+		return nil, fmt.Errorf("%w: unable to get account balance from helper", err)
 	}
+	return amount, nil
 
-	return nil, storageErrs.ErrAccountMissing
+	// var foundValue string
+	// _, err := dbTx.Scan(
+	// 	ctx,
+	// 	GetHistoricalBalancePrefix(account, currency),
+	// 	GetHistoricalBalanceKey(account, currency, index),
+	// 	func(k []byte, v []byte) error {
+	// 		foundValue = new(big.Int).SetBytes(v).String()
+	// 		return errAccountFound
+	// 	},
+	// 	false,
+	// 	true,
+	// )
+	// if errors.Is(err, errAccountFound) {
+	// 	return &types.Amount{
+	// 		Value:    foundValue,
+	// 		Currency: currency,
+	// 	}, nil
+	// }
+	// if err != nil {
+	// 	return nil, fmt.Errorf("%w: database scan failed", err)
+	// }
+	//
+	// return nil, storageErrs.ErrAccountMissing
 }
 
 // removeHistoricalBalances deletes all historical balances
