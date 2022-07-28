@@ -11,7 +11,7 @@ require (
 	github.com/dgraph-io/badger/v2 v2.2007.4
 	github.com/fatih/color v1.13.0
 	github.com/gorilla/mux v1.8.0
-	github.com/klaytn/klaytn v1.8.3
+	github.com/klaytn/klaytn v1.9.0
 	github.com/lucasjones/reggen v0.0.0-20180717132126-cdb49ff09d77
 	github.com/mitchellh/mapstructure v1.4.3
 	github.com/neilotoole/errgroup v0.1.6
